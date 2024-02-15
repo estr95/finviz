@@ -121,7 +121,7 @@ def get_news(ticker):
                 parsed_timestamp = datetime.strptime(raw_timestamp, "%b-%d-%y %I:%M%p")
             date = parsed_timestamp.date()
         else:
-            parsed_timestamp = datetime.strptime(raw_timestamp, "%I:%M%p").replace(
+            parsed_timestamp = datetime.strptime(raw_timestamp, "%I:%M").replace(
                 year=date.year, month=date.month, day=date.day)
 
         results.append((
